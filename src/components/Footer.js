@@ -1,56 +1,84 @@
 import React from "react";
-import {Box, Flex, HStack, Image, VStack} from "@chakra-ui/react";
 import logofooterwhite from "./images/logofooterwhite.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook,faInstagram,faTiktok,} from "@fortawesome/free-brands-svg-icons";
 
 function Footer(){
     const handleClick=()=>{}
+
+    const socials = [
+        {
+          icon: faEnvelope,
+          url: "mailto: hello@example.com",
+        },
+        {
+          icon: faFacebook,
+          url: "https://facebook.com",
+        },
+        {
+          icon: faInstagram,
+          url: "https://www.instagram.com",
+        },
+        {
+          icon: faTiktok,
+          url: "https://www.tiktok.com",
+        },
+      ];
+
+    const footerStyle={
+        display:'flex',
+        flexDirection:"row",
+        flexWrap:"wrap",
+        overflow: "hidden",
+        justifyContent :"center",
+        marginTop:"1em",
+        backgroundColor:"#495E57",
+        padding: "10px",
+    }
+    const liStyle={
+        color:"#EDEFEE",
+        listStyleType:"none",
+        padding: "5px 1em 0 2em",
+        fontFamily:"Karla",
+        fontSize:"18px",
+        fontWeight:"medium",
+        alignItems:"left",
+        justifyContent:"space-between",
+    }
     return(
-        <Box
-        backgroundColor="#495E57"
-        >
-            <footer>
-                <Flex
-                margin="0 auto"
-                justifyContent="center"
-                alignItems="center"
-                maxWidth="1024px"
-                height={380}
-                >
-            <HStack
-            color="#EDEFEE"
-            fontFamily="Karla"
-            fontSize={18}
-            fontWeight="medium"
-            alignItems="left"
-            justifyContent="space-between"
-            spacing={10}>
-                <Image
+            <footer style={footerStyle}>
+                <img
                 src={logofooterwhite}
                 alt="Little Lemon logo"
                 />
-                <VStack>
-                    <h1><strong>Doormat Navigation</strong></h1>
-                    <a href="." onClick={handleClick()}>Home </a>
-                    <a href="/about" onClick={handleClick()}>About</a>
-                    <a href="/menu" onClick={handleClick()}>Menu</a>
-                    <a href="/reservations" onClick={handleClick()}>Reservations</a>
-                    <a href="/onlineOrder" onClick={handleClick()}>Order Online</a>
-                    <a href="/login" onClick={handleClick()} >Login</a>
-                </VStack>
-                <VStack
-                alignItems="left">
-                <h1><strong>Contact details</strong></h1>
-                <p>Phone number : #########</p>
-                <p>Email : LittleLemon@hotmail.com</p>
-                </VStack>
-                <VStack
-                alignItems="left">
-                <h1><strong>Social Media</strong></h1>
-                </VStack>
-            </HStack>
-            </Flex>
+                <ul>
+                    <li style={liStyle}><h1><strong>Doormat Navigation</strong></h1></li>
+                    <li style={liStyle}><a href="." onClick={handleClick()}>Home </a></li>
+                    <li style={liStyle}><a href="/about" onClick={handleClick()}>About</a></li>
+                    <li style={liStyle}><a href="/menu" onClick={handleClick()}>Menu</a></li>
+                    <li style={liStyle}><a href="/reservations" onClick={handleClick()}>Reservations</a></li>
+                    <li style={liStyle}><a href="/onlineOrder" onClick={handleClick()}>Order Online</a></li>
+                    <li style={liStyle}><a href="/login" onClick={handleClick()} >Login</a></li>
+                </ul>
+                <ul>
+                    <li style={liStyle}><h1><strong>Contact details</strong></h1></li>
+                    <li style={liStyle}><p>Phone number : 07546854669 </p></li>
+                    <li style={liStyle}><p>Email : littlelemon@hotmail.com</p></li>
+                </ul>
+
+                <ul>
+                    <li style={liStyle}><h1><strong>Social Media</strong></h1></li>
+                    <li style={liStyle} >
+                        {socials.map(({url,icon}) => {
+                            return (
+                                <a key={url} href={url}>
+                                <FontAwesomeIcon icon={icon} key={url} size="2x"/>
+                                </a>)
+                            })}
+                    </li>
+                </ul>
             </footer>
-        </Box>
     )
 }
 
