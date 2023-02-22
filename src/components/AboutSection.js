@@ -1,7 +1,7 @@
 function AboutSection(){
     return(
     <article>
-about
+
     </article>
     )
 }

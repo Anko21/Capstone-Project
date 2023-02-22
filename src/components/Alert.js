@@ -1,7 +1,7 @@
 function Alert(){
     return(
     <>
-alert
+
     </>
     )
 }

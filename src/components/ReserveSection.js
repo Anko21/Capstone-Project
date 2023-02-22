@@ -1,7 +1,7 @@
 function ReserveSection(){
     return(
     <form>
-reservver
+
     </form>
     )
 }

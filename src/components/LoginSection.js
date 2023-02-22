@@ -1,7 +1,7 @@
 function LoginSection(){
     return(
     <form>
-login form
+
     </form>
     )
 }

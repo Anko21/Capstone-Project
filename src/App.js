@@ -8,21 +8,24 @@ import ReserveSection from "./components/ReserveSection";
 import LoginSection from "./components/LoginSection";
 import PaymentSection from "./components/PaymentSection";
 import Alert from "./components/Alert"
+import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
   return (
-    <main>
-      <Header/>
-      <HeroSection/>
-      <HighlightsSection/>
-      <TestimonialsSection/>
-      <AboutSection/>
-      <Footer/>
-      <ReserveSection/>
-      <LoginSection/>
-      <PaymentSection/>
-      <Alert/>
-    </main>
+    <ChakraProvider>
+      <main>
+        <Header/>
+        <HeroSection/>
+        <HighlightsSection/>
+        <TestimonialsSection/>
+        <AboutSection/>
+        <Footer/>
+        <ReserveSection/>
+        <LoginSection/>
+        <PaymentSection/>
+        <Alert/>
+      </main>
+    </ChakraProvider>
   );
 }
 

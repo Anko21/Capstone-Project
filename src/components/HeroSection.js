@@ -1,7 +1,7 @@
 function HeroSection(){
     return(
     <article>
-HEro
+
     </article>
     )
 }
