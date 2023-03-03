@@ -1,5 +1,5 @@
 *{
-margin:3px;
+margin:0px;
 padding:0;
 }
 
@@ -16,17 +16,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.nav{
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  justify-content :stretch;
-  }
-.nav li{
-  list-style-type:none;
-  display:inline;
-  padding : 15px;
-  color:333333;
-  font-family: Karla;
-  font-weight:"bold";
-  }

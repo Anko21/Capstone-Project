@@ -1,5 +1,6 @@
 import React from "react";
-import logofooterwhite from "./images/logofooterwhite.png"
+import '../App.css'
+import logofooter from "../assets/logofooter.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook,faInstagram,faTiktok,} from "@fortawesome/free-brands-svg-icons";
@@ -25,60 +26,41 @@ function Footer(){
           url: "https://www.tiktok.com",
         },
       ];
-
-    const footerStyle={
-        display:'flex',
-        flexDirection:"row",
-        flexWrap:"wrap",
-        overflow: "hidden",
-        justifyContent :"center",
-        marginTop:"1em",
-        backgroundColor:"#495E57",
-        padding: "10px",
-    }
-    const liStyle={
-        color:"#EDEFEE",
-        listStyleType:"none",
-        padding: "5px 1em 0 2em",
-        fontFamily:"Karla",
-        fontSize:"18px",
-        fontWeight:"medium",
-        alignItems:"left",
-        justifyContent:"space-between",
-    }
     return(
-            <footer style={footerStyle}>
+            <footer className="footer">
                 <img
-                src={logofooterwhite}
+                src={logofooter}
                 alt="Little Lemon logo"
+                width={150}
+                height={250}
                 />
-                <ul>
-                    <li style={liStyle}><h1><strong>Doormat Navigation</strong></h1></li>
-                    <li style={liStyle}><a href="." onClick={handleClick()}>Home </a></li>
-                    <li style={liStyle}><a href="/about" onClick={handleClick()}>About</a></li>
-                    <li style={liStyle}><a href="/menu" onClick={handleClick()}>Menu</a></li>
-                    <li style={liStyle}><a href="/reservations" onClick={handleClick()}>Reservations</a></li>
-                    <li style={liStyle}><a href="/onlineOrder" onClick={handleClick()}>Order Online</a></li>
-                    <li style={liStyle}><a href="/login" onClick={handleClick()} >Login</a></li>
-                </ul>
-                <ul>
-                    <li style={liStyle}><h1><strong>Contact details</strong></h1></li>
-                    <li style={liStyle}><p>Phone number : 07546854669 </p></li>
-                    <li style={liStyle}><p>Email : littlelemon@hotmail.com</p></li>
-                </ul>
-
-                <ul>
-                    <li style={liStyle}><h1><strong>Social Media</strong></h1></li>
-                    <li style={liStyle} >
-                        {socials.map(({url,icon}) => {
-                            return (
-                                <a key={url} href={url}>
-                                <FontAwesomeIcon icon={icon} key={url} size="2x"/>
-                                </a>)
-                            })}
+                <div className='footerInfo'>
+                  <ul className="footernav">
+                      <li><strong>Doormat Navigation</strong></li>
+                      <li><a href="." onClick={handleClick()}>Home </a></li>
+                      <li><a href="/about" onClick={handleClick()}>About</a></li>
+                      <li><a href="/menu" onClick={handleClick()}>Menu</a></li>
+                      <li><a href="/reservations" onClick={handleClick()}>Reservations</a></li>
+                      <li><a href="/onlineOrder" onClick={handleClick()}>Order Online</a></li>
+                      <li><a href="/login" onClick={handleClick()} >Login</a></li>
+                  </ul>
+                  <ul className="footercontact">
+                      <li><strong>Contact details</strong></li>
+                      <li>Phone number : 07546854669</li>
+                      <li>Email : littlelemon@hotmail.com</li>
+                  </ul>
+                  <ul className="footersocials">
+                    <li><strong>Social Media</strong></li>
+                    <li>{socials.map(({url,icon}) => {
+                      return (
+                        <a key={url} href={url}>
+                        <FontAwesomeIcon icon={icon} key={url} size="2x"/>
+                        </a>)
+                      })}
                     </li>
-                </ul>
-            </footer>
+                  </ul>
+                </div>
+              </footer>
     )
 }
 

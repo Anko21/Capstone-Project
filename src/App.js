@@ -1,3 +1,5 @@
+import React from "react";
+import './App.css'
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import HighlightsSection from "./components/HighlightsSection";
@@ -8,25 +10,20 @@ import ReserveSection from "./components/ReserveSection";
 import LoginSection from "./components/LoginSection";
 import PaymentSection from "./components/PaymentSection";
 import Alert from "./components/Alert"
-import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
   return (
-    <ChakraProvider>
-      <main>
-        <Header/>
-        <HeroSection/>
-        <HighlightsSection/>
-        <TestimonialsSection/>
-        <AboutSection/>
-        <Footer/>
-        <ReserveSection/>
-        <LoginSection/>
-        <PaymentSection/>
-        <Alert/>
+      <main className="container">
+        <div><Header/></div>
+        <div><HeroSection /></div>
+        <div ><HighlightsSection/></div>
+        <div><TestimonialsSection/></div>
+        <div><AboutSection/></div>
+        <div><Footer/></div>
+        <div className="alert"><Alert/></div>
       </main>
-    </ChakraProvider>
   );
 }
 
 export default App;
+//<div><ReserveSection/></div>

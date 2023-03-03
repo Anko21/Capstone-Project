@@ -1,6 +1,6 @@
 import React from "react";
 import {Box, Flex, HStack, Image, VStack} from "@chakra-ui/react";
-import logofooterwhite from "./images/logofooterwhite.png"
+import logofooterwhite from "./assets/logofooterwhite.png"
 
 function Footer(){
     const handleClick=()=>{}
