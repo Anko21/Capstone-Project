@@ -6,29 +6,24 @@ import restaurant from '../assets/restaurant.jpg'
 
 
 function ReserveSection(){
+
     return (
         <div className="reservepage">
             <div className="reserve">
                 <section className="reserveside">
                     <h1>Little Lemon</h1>
                     <p>Chicago</p>
-                    <img src={restaurantchefB} id="Areserve" alt="chef cooking" width={300}></img>
-                    <img src={restaurant} id="Breserve" alt="restaurant's garden" width={300}></img>
+                    <img src={restaurantchefB} id="Areserve" alt="chef cooking" ></img>
+                    <img src={restaurant} id="Breserve" alt="restaurant's garden"></img>
                 </section>
                 <form className="reserveform">
                     <h1>Find your table for any occassion</h1>
                     <div className="date">
-                        <select id="date" required>
-                            <option value="title">Date</option>
-                            <option value="22/02/2023">22/02/2023</option>
-                            <option value="23/02/2023">23/02/2023</option>
-                            <option value="24/02/2023">24/02/2023</option>
-                            <option value="25/02/2023">25/02/2023</option>
-                            <option value="26/02/2023">26/02/2023</option>
-                            <option value="27/02/2023">27/02/2023</option>
-                            <option value="28/02/2023">28/02/2023</option>
-                        </select>
-                        <br></br>
+                        <input 
+                        placeholder="Date"
+                        type="text" /*onChange={(e) => console.log(e.target.value)}*/
+                        onFocus={(e) => (e.target.type = "date")}
+                        onBlur={(e) => (e.target.type = "text")} id="date" name='date'/>
                     </div>
                     <div className="time">
                         <select id="time" name="time" required>
@@ -37,6 +32,10 @@ function ReserveSection(){
                         <option value="19:30">19:30</option>
                         <option value="20:00">20:00</option>
                         <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:30">21:30</option>
+                        <option value="22:00">22:00</option>
+                        <option value="22:30">22:30</option>
                         </select>
                         <br></br>
                     </div>
@@ -53,6 +52,7 @@ function ReserveSection(){
                     <div className="occasion">
                         <select id="occasion" name="occasion" required>
                         <option value="title">Occasion</option>
+                        <option value="birthday">Dinner</option>
                         <option value="birthday">Birthday</option>
                         <option value="anniversary">Anniversary</option>
                         <option value="engagement">Engagement</option>

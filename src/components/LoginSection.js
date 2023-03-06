@@ -26,7 +26,7 @@ function LoginSection(){
                                 </div>
                                 <div className="logincouples">
                                     <div className="loginfield">
-                                        <input type="number" id="phone" name="phone" placeholder="*Phone number" required/><br/>
+                                        <input type="tel" id="phone" name="phone" placeholder="*Phone number" inputmode="numeric" required/><br/>
                                         <label for="phone">Phone number is required</label><br/>
                                     </div>
                                     <div className="loginfield">
@@ -41,7 +41,7 @@ function LoginSection(){
                                 rows="4"
                                 cols="40"
                                 maxlength={250}
-                                placeholder="*Add a special request(optional)"> 
+                                placeholder="*Add a special request(optional)">
                             </textarea>
                         </div>
                     </div>
