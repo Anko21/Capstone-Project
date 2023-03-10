@@ -16,11 +16,11 @@ function PaymentSection(){
                     <div className="payaddinfo">
                         <fieldset id="paybookingconf">
                             {/* boc shadow :inset 1px 1px 3px #3333 */}
-                            <p>Date: {} <br/>
-                            Time: {}<br/>
-                            Number of diners: {}<br/>
-                            Ocassion: {}<br/>
-                            Seating option: Inside</p>
+                            <p>Date: 26/02/2023 <br/>
+                            Time: 20:00<br/>
+                            Number of diners: 0-2<br/>
+                            Ocassion: dinner<br/>
+                            </p>
                         </fieldset>
                         <textarea
                         name="comments"

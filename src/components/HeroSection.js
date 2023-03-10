@@ -5,12 +5,7 @@ import {Link} from 'react-router-dom';
 
 
 function HeroSection(){
-    const handleClick=()=>{
-        return(
-            <div>
-            <a href="/reservations"></a>
-            </div>
-        )}
+
     return(
     <div className="hero" id="hero">
         <div className="heroInfo">
@@ -21,7 +16,7 @@ function HeroSection(){
             </article>
             <div className="reservebtn">
                 <Link to="/reservations">
-                <button onClick={handleClick}>Reserve a table</button>
+                <button>Reserve a table</button>
                 </Link>
             </div>
         </div>

@@ -122,9 +122,9 @@ function ReserveForm(){
                 </section>
             </div>
         </div>
-        <Link to="/pay">
+        {/* <Link to="/pay"> */}
             <input type="submit" className="reserveformButton" value="Make your reservation" />
-        </Link>
+        {/* </Link> */}
 
         </form>
     </div>

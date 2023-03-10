@@ -12,15 +12,17 @@ import Alert from "./components/Alert"
 function App() {
   return (
       <main className="container">
-          <div><Header/></div>
-          <div><HeroSection /></div>
-          <div><HighlightsSection/></div>
-          <div><TestimonialsSection/></div>
-          <div><AboutSection/></div>
-          <div><Footer/></div>
-          <div className="alert"><Alert/></div>
+        <div><Header/></div>
+        <div><HeroSection /></div>
+        <div ><HighlightsSection/></div>
+        <div><TestimonialsSection/></div>
+        <div><AboutSection/></div>
+        <div><Footer/></div>
+        <div className="alert"><Alert/></div>
       </main>
-  );
+  )
 }
 
-export default App; 
+export default App;
+//<div><ReserveSection/></div>
+
