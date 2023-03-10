@@ -6,24 +6,21 @@ import HighlightsSection from "./components/HighlightsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import AboutSection from "./components/AboutSection";
 import Footer from "./components/Footer";
-import ReserveSection from "./components/ReserveSection";
-import LoginSection from "./components/LoginSection";
-import PaymentSection from "./components/PaymentSection";
 import Alert from "./components/Alert"
+
 
 function App() {
   return (
       <main className="container">
-        <div><Header/></div>
-        <div><HeroSection /></div>
-        <div ><HighlightsSection/></div>
-        <div><TestimonialsSection/></div>
-        <div><AboutSection/></div>
-        <div><Footer/></div>
-        <div className="alert"><Alert/></div>
+          <Header/>
+          <HeroSection />
+          <HighlightsSection/>
+          <TestimonialsSection/>
+          <AboutSection/>
+          <Footer/>
+          <div className="alert"><Alert/></div>
       </main>
   );
 }
 
-export default App;
-//<div><ReserveSection/></div>
+export default App; 

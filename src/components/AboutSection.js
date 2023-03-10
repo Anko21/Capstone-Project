@@ -5,7 +5,7 @@ import MarioAdrianB from '../assets/MarioAdrianB.jpg'
 
 function AboutSection(){
     return(
-        <div className='about'>
+        <div className='about' id="about">
             <div className="aboutInfo">
                 <article className="brand">
                     <h1>Little Lemon</h1>

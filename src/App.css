@@ -26,9 +26,6 @@
     align-items: center;
     margin:10px;
     }
-  .header >img{
-    width: 16em;
-  }
   .navbar{
     display: flex;
     flex-flow: row wrap;
@@ -43,16 +40,14 @@
     font-weight:bold;
   }
   .header a:hover{
+    font-size:20px;
+    font-weight:bolder;
+  }
+  .header a:active{
     background-color: #495E57;
     color:#EDEFEE;
     border-radius: 5px;
   }
-  .header a:active{
-    background-color: #F4CE14;
-    color:#3333;
-    border-radius: 5px;
-  }
-  
   /*OK~~~~~~~~~~~~HERO~~~~~~~~~~~*/
   .hero{
     grid-area: hero;
@@ -112,7 +107,9 @@
     grid-area: highlights;
     display: grid;
     grid-template-rows: 1fr 3fr;
+    grid-template-columns: auto;;
     padding:50px;
+    width:100%;
   }
   .promoheading{
     grid-row:1;
@@ -517,10 +514,10 @@
   .seatout input {
     margin-left: 22px
   }
-  .reserveform button {
+  .reserveformButton {
     background-color: #F4CE14;
     border-radius: 16px;
-    width: 150px;
+    width: 200px;
     height:40px;
     color:#333333;
     font-family:Karla;
@@ -723,7 +720,15 @@
     font-weight:bold;
     margin: 0 60px 0 60px;
   }
-  
+
+  /* span{
+    color:red;
+    display : none;
+  }
+  input  :invalid[focused="true"] ~ span{
+    display: block;
+    border:2px solid red;
+  } */
   /*~~~~~~~~~~~~Confirmation~~~~~~~~~~~*/
 
   @media (max-width:830px) {

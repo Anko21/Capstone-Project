@@ -36,7 +36,7 @@ function TestimonialsSection(){
 
     ]
     return(
-        <div  className="testimonials">
+        <div  className="testimonials" id="testimonials">
             <h1>Testimonials</h1>
             <section className="testicards">
                     {testimonials.map((testimonial)=>(

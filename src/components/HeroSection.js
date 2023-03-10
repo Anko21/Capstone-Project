@@ -1,8 +1,7 @@
 import React from "react";
 import '../App.css'
 import restaurantfood from "../assets/restaurantfood.jpg"
-import ReserveSection from "./ReserveSection";
-import {Routes, Route, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 function HeroSection(){
@@ -13,7 +12,7 @@ function HeroSection(){
             </div>
         )}
     return(
-    <div className="hero">
+    <div className="hero" id="hero">
         <div className="heroInfo">
             <article>
                 <h1>Little Lemon</h1>
@@ -21,7 +20,9 @@ function HeroSection(){
                 <p className="details">We are a family owned Mediterranean restaurant, focus on traditional recipes served in a modern twist.</p>
             </article>
             <div className="reservebtn">
+                <Link to="/reservations">
                 <button onClick={handleClick}>Reserve a table</button>
+                </Link>
             </div>
         </div>
         <img

@@ -26,7 +26,7 @@ function HighlightsSection(){
         },
     ]
     return(
-        <div className="highlights">
+        <div className="highlights" id="onlineOrders">
             <div className="promoheading">
                 <h1>This Weeks specials!</h1>
                 <button>Online Menu</button>
