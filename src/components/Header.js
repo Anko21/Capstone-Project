@@ -69,9 +69,9 @@ function Header(){
                 </ul>
             </nav>
             <Routes>
-                    <Route path="" element={<Header/>}/>
-                    <Route path="" element={<AboutSection/>} />
-                    <Route path="" element={<HighlightsSection/>}/>
+                    <Route path="/" element={<Header/>}/>
+                    <Route path="about" element={<AboutSection/>} />
+                    <Route path="onlineOrder" element={<HighlightsSection/>}/>
                     <Route path="/reservations" element={<ReserveSection/>} />
                     <Route path="/login" element={<LoginSection/>} />
                     <Route path="/pay" element={<PaymentSection/>} />
